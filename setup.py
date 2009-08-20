@@ -1,7 +1,6 @@
 from setuptools import setup, find_packages, Extension
 import os
 import sys
-import os.path
 
 def read_file(name):
     return open(os.path.join(os.path.dirname(__file__),name)).read()
@@ -25,7 +24,7 @@ def find_file(fname, dirs):
             res=find_file(fname,localdirs)
             if res:
                 return True
-    return False            
+    return False
 
 readme = read_file('README')
 
@@ -63,11 +62,11 @@ if find_file('libev.so',library_dirs)==False:
 
 
 
-setup(name='fapws3',
+setup(name='nfapws',
       version="0.3.2",
       description="Fast Asynchronous Python Web Server",
       long_description=readme,
-classifiers=['Development Status :: 4 - Beta','Environment :: Web Environment','License :: OSI Approved :: GNU General Public License (GPL)','Programming Language :: C','Programming Language :: Python','Topic :: Internet :: WWW/HTTP :: HTTP Servers','Topic :: Internet :: WWW/HTTP :: WSGI :: Server'], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      classifiers=['Development Status :: 4 - Beta','Environment :: Web Environment','License :: OSI Approved :: GNU General Public License (GPL)','Programming Language :: C','Programming Language :: Python','Topic :: Internet :: WWW/HTTP :: HTTP Servers','Topic :: Internet :: WWW/HTTP :: WSGI :: Server'], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='',
       author='William',
       author_email='william.os4y@gmail.com',
@@ -76,7 +75,7 @@ classifiers=['Development Status :: 4 - Beta','Environment :: Web Environment','
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          # -*- Extra requirements: -*-
+          'setuptools'
       ],
       entry_points="""
       # -*- Entry points: -*-
