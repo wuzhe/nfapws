@@ -79,11 +79,11 @@ How to install fapws?
 Pre-requisit:
 -------------
 
-* Python with header files >= 2.4, (in Debian, ``sudo aptitude install
-  python python-dev``)
+* Python with header files, version >= 2.4, (in Debian, ``sudo aptitude
+  install python python-dev``)
 
-* Libev with header files, (in Debian, ``sudo aptitude install libev3
-  libev-dev``)
+* Libev with header files, version >= 3.49 (in Debian, ``sudo aptitude
+  install libev3 libev-dev``)
 
 WARNING:
 
